@@ -141,6 +141,7 @@ class AchievementsController extends Controller
                     FileHelper::createDirectory($folder_path, $mode = 0775, $recursive = true);
                     $image = "$folder_path/index" . "." . $file->extension;
                     $model->image = $image;
+                    $model->vedio=null;
                     $file->saveAs($image);
                 }
     
