@@ -34,6 +34,23 @@ $this->params['breadcrumbs'][] = $this->title;
             'first_name',
             'last_name',
             'born_date',
+            [
+
+                'attribute' => 'صوره',
+    
+                'format' => 'html',
+    
+    
+                'value' => function ($data) {
+                   
+    
+                    return Html::img('/'.$data['avatar'],
+    
+                        ['width' => '60px']);
+    
+                },
+    
+            ],
             //'auth_key',
             //'password_hash',
             //'password_reset_token',

@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\students\Students */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Students'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Members'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -39,6 +39,11 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'password_reset_token',
             'email:email',
             'dateofbirth',
+            [
+                'attribute' => 'صورة',
+                'value'=> '/'.$model->avatar,
+                'format' => ['image',['width'=>'100','height'=>'100']],
+            ],
             // 'verification_token',
             // 'type',
             // 'status',

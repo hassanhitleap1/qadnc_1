@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Member'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Create'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -37,6 +37,23 @@ $this->params['breadcrumbs'][] = $this->title;
             'qualifications',
             'experience',
             'activities',
+            [
+
+                'attribute' => 'صوره',
+    
+                'format' => 'html',
+    
+    
+                'value' => function ($data) {
+                   
+    
+                    return Html::img('/'.$data['avatar'],
+    
+                        ['width' => '60px']);
+    
+                },
+    
+            ],
             
             //'auth_key',
             //'password_hash',

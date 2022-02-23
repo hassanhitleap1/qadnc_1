@@ -23,11 +23,12 @@ class MembersController extends Controller
         $this->layout = "admin";
         parent::init();
         if (\Yii::$app->user->isGuest) {
-            return $this->redirect('site/login');
+            header("Location: https://qadnc.org.sa/web/site/login");
+            exit();
         }elseif (Yii::$app->user->identity->type != User::SUPER_ADMIN) {
             throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
         }
-
+    
     }
     /**
      * @inheritDoc
@@ -96,7 +97,7 @@ class MembersController extends Controller
                 $model->file = UploadedFile::getInstance($model, 'file');
                 if( $model->validate()){
                     $model->status=User::STATUS_ACTIVE;
-                    $model->type=User::Student;
+                    $model->type=User::Memmber;
                     $model->password_hash=\Yii::$app->security->generatePasswordHash("123456");
                     $model->auth_key = \Yii::$app->security->generateRandomString();
                     $model->verification_token = \Yii::$app->security->generateRandomString() . '_' . time();                 

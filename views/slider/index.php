@@ -31,7 +31,24 @@ $this->params['breadcrumbs'][] = $this->title;
 
 //            'id',
             'title',
-            'image',
+        
+            [
+
+                'attribute' => 'image',
+    
+                'format' => 'html',
+    
+    
+                'value' => function ($data) {
+                   
+    
+                    return Html::img('/'.$data['image'],
+    
+                        ['width' => '60px']);
+    
+                },
+    
+            ],
             'body:ntext',
             [
                 'class' => 'yii\grid\ActionColumn',

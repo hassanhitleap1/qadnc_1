@@ -85,7 +85,8 @@ return [
     'This email address has already been taken'=>'هذا الايميل مأـخوذ ',
     "Passwords don't match"=>"كلمات المرور غير متطابقة",
     'Are you sure you want to delete this item?'=>'هل انت متأكد من حذف العنصر',
-    'Delete'=> 'حذف'
+    'Delete'=> 'حذف',
+    'Create Member'=>'انشاء عضو'
 
     
 

@@ -39,6 +39,11 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'password_reset_token',
             'email:email',
             'dateofbirth',
+            [
+                'attribute' => 'صورة',
+                'value'=> '/'.$model->avatar,
+                'format' => ['image',['width'=>'100','height'=>'100']],
+            ],
             // 'verification_token',
             // 'type',
             // 'status',
