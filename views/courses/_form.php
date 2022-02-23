@@ -8,6 +8,30 @@ use kartik\time\TimePicker;
 /* @var $this yii\web\View */
 /* @var $model app\models\courses\Courses */
 /* @var $form yii\widgets\ActiveForm */
+
+if ($model->isNewRecord) {
+    $dataImages = [
+        'showCaption' => true,
+        'showRemove' => true,
+        'showUpload' => false
+    ];
+}else{
+    $dataImages = [
+        'showCaption' => true,
+        'showRemove' => true,
+        'showUpload' => false,
+        'initialPreview' => [
+            Yii::getAlias('@web') . '/' . $model->image
+        ],
+        'initialPreviewAsData' => true,
+        'initialCaption' => Yii::getAlias('@web') . '/' . $model->image,
+        'initialPreviewConfig' => [
+            ['caption' => $model->image],
+        ],
+        'overwriteInitial'=>true
+
+    ];
+}
 ?>
 
 <div class="courses-form">
@@ -96,20 +120,7 @@ use kartik\time\TimePicker;
         <div class="col-md-4">
             <?= $form->field($model, 'file')->widget(\kartik\file\FileInput::classname(), [
                 'options' => ['accept' => 'image/*'],
-                'pluginOptions' => [
-                    'showCaption' => true,
-//                        'showRemove' => true,
-                    'showUpload' => false,
-                    'initialPreview' => [
-                        Yii::getAlias('@web')
-                    ],
-                    'initialPreviewAsData' => true,
-                    'initialCaption' => Yii::getAlias('@web'),
-                    'initialPreviewConfig' => [
-
-                    ],
-                    'overwriteInitial'=>true
-                ]
+                'pluginOptions' => $dataImages
             ]);
 
             ?>

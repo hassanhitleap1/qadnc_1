@@ -5,19 +5,29 @@ use yii\widgets\ActiveForm;
 
 
 
-$dataImage = [
-    'showCaption' => true,
-    'showRemove' => true,
-    'showUpload' => false,
-    'initialPreviewAsData' => false,
-    'initialPreviewConfig' => [
-        ['caption' => 'logo'],
-    ],
-    'overwriteInitial'=>true,
-    'placeholder'=>Yii::t('app','Image')
+if ($model->isNewRecord) {
+    $dataImages = [
+        'showCaption' => true,
+        'showRemove' => true,
+        'showUpload' => false
+    ];
+}else{
+    $dataImages = [
+        'showCaption' => true,
+        'showRemove' => true,
+        'showUpload' => false,
+        'initialPreview' => [
+            Yii::getAlias('@web') . '/' . $model->image
+        ],
+        'initialPreviewAsData' => true,
+        'initialCaption' => Yii::getAlias('@web') . '/' . $model->image,
+        'initialPreviewConfig' => [
+            ['caption' => $model->image],
+        ],
+        'overwriteInitial'=>true
 
-];
-
+    ];
+}
 
 /* @var $this yii\web\View */
 /* @var $model app\models\slider\Slider */
@@ -31,19 +41,10 @@ $dataImage = [
          <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
 
-        <?=
-        $form->field($model, 'file')->widget(\kartik\file\FileInput::classname(), [
+        <?= $form->field($model, 'file')->widget(\kartik\file\FileInput::classname(), [
             'options' => ['accept' => 'image/*','placeholder'=>Yii::t('app','Logo')],
-            'pluginOptions' => $dataImage
-        ])->label(Yii::t('app','Image'));
-
-        ?>
-
-
-
-
-
-
+            'pluginOptions' => $dataImages
+            ])->label(Yii::t('app','Image'));?>
 
     <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 

@@ -4,6 +4,30 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\datepicker\DatePicker;
 
+if ($model->isNewRecord) {
+    $dataImages = [
+        'showCaption' => true,
+        'showRemove' => true,
+        'showUpload' => false
+    ];
+}else{
+    $dataImages = [
+        'showCaption' => true,
+        'showRemove' => true,
+        'showUpload' => false,
+        'initialPreview' => [
+            Yii::getAlias('@web') . '/' . $model->avatar
+        ],
+        'initialPreviewAsData' => true,
+        'initialCaption' => Yii::getAlias('@web') . '/' . $model->avatar,
+        'initialPreviewConfig' => [
+            ['caption' => $model->avatar],
+        ],
+        'overwriteInitial'=>true
+
+    ];
+}
+
 /* @var $this yii\web\View */
 /* @var $model app\models\students\Students */
 /* @var $form yii\widgets\ActiveForm */
@@ -38,20 +62,7 @@ use dosamigos\datepicker\DatePicker;
 
      <?= $form->field($model, 'file')->widget(\kartik\file\FileInput::classname(), [
                 'options' => ['accept' => 'image/*'],
-                'pluginOptions' => [
-                    'showCaption' => true,
-//                        'showRemove' => true,
-                    'showUpload' => false,
-                    'initialPreview' => [
-                        Yii::getAlias('@web')
-                    ],
-                    'initialPreviewAsData' => true,
-                    'initialCaption' => Yii::getAlias('@web'),
-                    'initialPreviewConfig' => [
-
-                    ],
-                    'overwriteInitial'=>true
-                ]
+                'pluginOptions' =>  $dataImages 
             ]);
 
             ?>
