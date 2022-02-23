@@ -1,0 +1,271 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face{
+	font-family:'Monotype';
+	src:url('/fonts/Monotype-SST-Arabic-Roman.otf');
+}
+@font-face{
+	font-family:'Monotype Medium';
+	src:url('/fonts/Monotype-SST-Arabic-Medium.otf');
+}
+@font-face{
+	font-family:'Monotype Light';
+	src:url('/fonts/Monotype-SST-Arabic-Light.otf');
+}
+@font-face{
+	font-family:'Monotype Bold';
+	src:url('/fonts/Monotype-SST-Arabic-Bold.otf');
+}
+
+html, body{
+    font-family:'Monotype Light' !important;
+    line-height: 1.4;
+    overflow-x: hidden;
+    position: relative;
+    /* margin-top: 98px; */
+}
+
+strong, b {
+    font-family:'Monotype Bold' !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    color: #00d0c5;
+}
+
+a, a:hover {
+    text-decoration: none !important;
+}
+
+.footer {
+    background-color: #005a8b;
+    padding: 55px 25px;
+    color: #fff;
+}
+
+.copyright {
+    background-color: #00d0c5;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.w-400 {
+    max-width: 400px;
+}
+
+.board {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.board-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid #00d0c5;
+}
+
+.activity-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 65px;
+    position: relative;
+}
+
+.activity-body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.activity-title:after {
+    position: absolute;
+    bottom: -0.5em;
+    left: 50%;
+    height: 0.09em;
+    content: '';
+    background: #00d0c5;
+    width: 5em;
+    margin-left: -2.5em;
+}
+
+.btn-green {
+    color: #00d0c5;
+    border-color: #00d0c5;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+}
+
+.btn-green:hover {
+    color: #fff;
+    background-color: #00d0c5;
+    border-color: #00d0c5;
+}
+
+.courses-body {
+    padding: 80px 0;
+    background-color: #f8f9fa;  
+}
+
+.card {
+    box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+}
+
+.category {
+    color: #999;
+    font-size: 14px;
+}
+
+.activity-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.activity-title:after {
+    position: absolute;
+    bottom: -0.5em;
+    left: 50%;
+    height: 0.09em;
+    content: '';
+    background: #00d0c5;
+    width: 5em;
+    margin-left: -2.5em;
+}
+
+.consulting-body {
+    padding: 80px 0;
+    background-color: #f8f9fa;  
+}
+
+.activity-title {
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+}
+
+.activity-title:after {
+    position: absolute;
+    bottom: -0.5em;
+    left: 50%;
+    height: 0.09em;
+    content: '';
+    background: #00d0c5;
+    width: 5em;
+    margin-left: -2.5em;
+}
+
+.btn-primary {
+    min-width: 90px;
+    /* float: left; */
+    background-color: #00d0c5;
+    border-color: #00d0c5;
+}
+
+.pull-left {
+    float: left;
+}
+
+.registration-box {
+    border: 1px solid #ced4da;
+    padding: 12px 6px;
+    border-radius: 0.25rem;
+}
+
+
+.border-left {
+    border-left: 1px solid #ced4da;
+}
+
+.f-20 {
+    font-size: 20px;
+}
+
+.consulting-body label {
+    display: none;
+}
+
+.consulting-image {
+    width: 100%;
+    height: 100%;
+}
+
+.logout {
+    padding: 9px 20px;
+    display: block;
+    color: #343a40 !important;
+    text-decoration: none;
+}
+
+.header-profile-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    margin-left: 8px;
+    background: #fff;
+}
+
+.pl-2 {
+    padding-left: .5rem;
+}
+
+.course-title {
+    padding-bottom: 15px;
+    font-size: 1.625rem;
+    color: #005a8b;
+}
+
+.course-description {
+    padding-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.f-18 {
+    font-size: 18px;
+}
+
+.course-options {
+    background: #eff2f8;
+    border-bottom: 1px solid #fff;
+    padding: 10px 15px 12px 10px;
+    color: #575757;
+    line-height: 1;
+    font-size: 1rem;
+}
+
+.twitter-icon {
+    color: rgb(29, 155, 240);
+}
+
+.board-profile-picture {
+    max-width: 100%;
+    height: 256px;
+    width: 265px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    margin-left: 8px;
+    background: #fff;
+}
+
+.details {
+    padding: 80px 0;
+}
+
+pre {
+    direction: rtl;
+    overflow: hidden;
+    white-space: pre-line;
+    word-wrap: break-word;
+    font-family: 'Monotype Light' !important;
+}

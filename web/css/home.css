@@ -1,0 +1,265 @@
+.about-us {
+    padding: 80px 0;
+}
+
+.about-us-title {
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.about-us-orgname {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: #00d0c5
+}
+
+.about-us-desc {
+    font-size: 20px;
+    color: gray;
+    text-align: justify;
+}
+
+.activity {
+    padding: 45px 0;
+    background: linear-gradient(135deg, #005a8b 37%, #00d0c5 100%);
+    color: #fff;
+    text-align: center;
+}
+
+.activity-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 65px;
+    position: relative;
+}
+
+.activity-body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.activity-title:after {
+    position: absolute;
+    bottom: -0.5em;
+    left: 50%;
+    height: 0.09em;
+    content: '';
+    background: #00d0c5;
+    width: 5em;
+    margin-left: -2.5em;
+}
+
+.activity-icon img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 8px;
+}
+
+.contact-us-icon {
+    font-size: 25px;
+}
+
+.board {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.board-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.slider-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.slider-image:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background: rgba(39, 66, 74, 0.32);
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption {
+    top:20.5rem
+}
+
+.carousel-title {
+    font-size: 67px;
+    line-height: 72px;
+    letter-spacing: 0px;
+    margin-bottom: 22px;
+}
+
+@media only screen and (max-width: 767px) {
+    .carousel-title {
+        font-size: 40px;
+    }
+}
+
+.carousel-desc {
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.site-navbar {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    border-bottom: 0;
+    box-shadow: none;
+}
+
+.site-navbar .site-navigation .site-menu>li>a, .menu-icon .text-dark {
+    color: #fff !important;
+}
+
+
+.achievements {
+    background: #f8f9fa;
+    /* direction: ltr; */
+    padding: 80px 0;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    /* color: transparent; */
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: "Font Awesome 6 Free";
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '\f359';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '\f35a';
+}
+
+.slick-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+    left: -25px;
+}
+@media only screen and (min-width: 767px) {
+    [dir='rtl'] .slick-next
+    {
+        right: auto;
+    }
+}
+.slick-next:before
+{
+    content: '\f35a';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '\f359';
+}
+
+.slick-slide img {
+    width: 100%;
+    height: 253px;
+}
+
+.slick-initialized .slick-slide {
+    position: relative;
+    margin: 5px;
+}
+
+.achievements-title {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    z-index: 233333333333333;
+}
+
+.site-navbar .site-logo {
+    display: none;
+}
+
+.site-navbar .home-logo {
+    display: block;
+}
