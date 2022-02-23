@@ -52,11 +52,12 @@ class Achievements extends \yii\db\ActiveRecord
         if (parent::beforeValidate()) {
             $this->file = UploadedFile::getInstance($this, 'file');
             if($this->scenario == self::Create){
-
+                
                 if(empty($this->vedio) &&  (empty($this->file) == true)){
                     $this->addError('file', 'يجب عليك اضافة رابط يوتيوب او صوره'); 
                     return false;
-                }elseif(isset($this->vedio) &&  (empty($this->file) == false)){
+                }elseif(isset($this->vedio) &&  (isset($this->file) == false)){
+                    
                     $this->addError('file', 'يجب عليك اضافة رابط يوتيوب او صوره'); 
                     return false;
                 }elseif(isset($this->vedio) &&  (empty($this->file) == true)){
