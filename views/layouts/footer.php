@@ -1,14 +1,13 @@
-<footer class="footer">
+<footer class="copyright">
     <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                    <img src="<?= Yii::$app->request->baseUrl?>/images/ligth-logo.png" alt="qadnc logo" width="300" />
+        <div class="d-flex">
+            <div class="flex-grow-1 text-right">
+                <img src="<?= Yii::$app->request->baseUrl ?>/images/ligth-logo.png" alt="qadnc logo" width="200" />
+            </div>
+            <div></div>
+            <div class="align-self-center">
+                جميع الحقوق محفوظة © الجمعية التعاونية تأهيل وتطوير الكوادر الوطنية
             </div>
         </div>
     </div>
 </footer>
-<div class="copyright">
-    <div class="container">
-        جميع الحقوق محفوظة © الجمعية التعاونية تأهيل وتطوير الكوادر الوطنية
-    </div>
-</div>
