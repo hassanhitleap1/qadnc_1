@@ -9,9 +9,11 @@ use Yii;
  *
  * @property int $id
  * @property string $name
+ * @property  string $image
  */
 class AssociationActivities extends \yii\db\ActiveRecord
 {
+    public $file;
     /**
      * {@inheritdoc}
      */
@@ -28,6 +30,7 @@ class AssociationActivities extends \yii\db\ActiveRecord
         return [
             [['name'], 'required'],
             [['name'], 'string', 'max' => 500],
+            [['file'],'image', 'skipOnEmpty' => true, 'extensions' => 'png,jpg,jpeg,gif']
         ];
     }
 
@@ -39,6 +42,8 @@ class AssociationActivities extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'name' => Yii::t('app', 'Name'),
+            'image'=>Yii::t('app' ,'Image'),
+            'file'=>Yii::t('app' ,'Image'),
         ];
     }
 

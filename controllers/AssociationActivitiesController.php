@@ -5,10 +5,12 @@ namespace app\controllers;
 use app\models\associationactivities\AssociationActivities;
 use app\models\associationactivities\AssociationActivitiesSearch;
 use app\models\User;
+use yii\helpers\FileHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * AssociationActivitiesController implements the CRUD actions for AssociationActivities model.
@@ -85,9 +87,23 @@ class AssociationActivitiesController extends Controller
     {
         $model = new AssociationActivities();
 
+
         if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+            $newId = AssociationActivities::find()->max('id') + 1;
+            if ($model->load($this->request->post()) ) {
+                $model->file = UploadedFile::getInstance($model, 'file');
+                if($model->validate()){
+                    if (!is_null( $model->file)) {
+                        FileHelper::createDirectory("uploads/associationactivities/$newId");
+                        $path="uploads/associationactivities/$newId/index" . "." .  $model->file->extension;
+                        $model->file->saveAs($path);
+                        $model->image=$path;
+                    }
+                    $model->save(false);
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+
+
             }
         } else {
             $model->loadDefaultValues();
@@ -109,8 +125,19 @@ class AssociationActivitiesController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($this->request->isPost && $model->load($this->request->post()) ) {
+            if($model->validate()){
+                $model->file = UploadedFile::getInstance($model, 'file');
+                if (!is_null( $model->file)) {
+                    FileHelper::createDirectory("uploads/associationactivities/$model->id");
+                    $path="uploads/associationactivities/$model->id/index" . "." .  $model->file->extension;
+                    $model->file->saveAs($path);
+                    $model->image=$path;
+                }
+                $model->save(false);
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+
         }
 
         return $this->render('update', [
