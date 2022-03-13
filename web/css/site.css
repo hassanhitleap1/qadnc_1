@@ -269,3 +269,11 @@ pre {
     word-wrap: break-word;
     font-family: 'Monotype Light' !important;
 }
+
+.text-primary {
+    color: #005a8a!important;
+}
+
+.text-right {
+    text-align: right;
+}

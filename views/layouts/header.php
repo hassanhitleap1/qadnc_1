@@ -11,40 +11,38 @@ use yii\helpers\Html;
         </div>
         <div class="site-mobile-menu-body">
             <ul class="site-nav-wrap">
-                <li class="<?= Yii::$app->controller->route =='site/index'?'active':''?>">
-                    <?=Html::a("<span>الرئيسية</span>",['site/index'])?>
+                <li class="<?= Yii::$app->controller->route == 'site/index' ? 'active' : '' ?>">
+                    <?= Html::a("<span>الرئيسية</span>", ['site/index']) ?>
                 </li>
 
 
-                <li><a href="/#aboutUs"><span>من نحن</span></a></li>
+                <li><a href="/#aboutUs" class="scroll"><span>من نحن</span></a></li>
                 <li><a href="/#activity"><span>أنشطة الجمعية</span></a></li>
                 <li><a href="/#achievements"><span>الأخبار والإعلانات</span></a></li>
                 <li><a href="/#contactUs"><span>اتصل بنا</span></a></li>
 
 
 
-                <li class="<?= Yii::$app->controller->route =='site/board'?'active':''?>">
-                    <?=Html::a("<span>مجلس الادارة</span>",['site/board'])?>
+                <li class="<?= Yii::$app->controller->route == 'site/board' ? 'active' : '' ?>">
+                    <?= Html::a("<span>مجلس الادارة</span>", ['site/board']) ?>
+                </li>
+                <li class="<?= Yii::$app->controller->route == 'site/courses' ? 'active' : '' ?>">
+                    <?= Html::a("<span>الدورات</span>", ['site/courses']) ?>
                 </li>
 
-                <li class="<?= Yii::$app->controller->route =='site/courses'?'active':''?>">
-                <?=Html::a("<span>الدورات</span>",['site/courses'])?>
-                </li>
-
-                <li class="<?= Yii::$app->controller->route =='site/consulting'?'active':''?>">
-                <?=Html::a("<span>الاستشارات</span>",['site/consulting'])?>
+                <li class="<?= Yii::$app->controller->route == 'site/consulting' ? 'active' : '' ?>">
+                    <?= Html::a("<span>الاستشارات</span>", ['site/consulting']) ?>
                 </li>
 
                 <?php if (Yii::$app->user->isGuest) : ?>
-                    <li class="<?= Yii::$app->controller->route =='site/login'?'active':''?>">
-                         <?=Html::a("<span>تسجيل دخول</span>",['site/login'])?>
+                    <li class="<?= Yii::$app->controller->route == 'site/login' ? 'active' : '' ?>">
+                        <?= Html::a("<span>تسجيل دخول</span>", ['site/login']) ?>
                     </li>
-
                 <?php else : ?>
 
                     <?php if (Yii::$app->user->identity->type == \app\models\User::SUPER_ADMIN) : ?>
-                            <li><a href="<?= \yii\helpers\Url::to(['/courses/index']) ?>"><?= Yii::t('app','Dashboard')?></a></li>
-                    <?php endif;?>
+                        <li><a href="<?= \yii\helpers\Url::to(['/courses/index']) ?>"><?= Yii::t('app', 'Dashboard') ?></a></li>
+                    <?php endif; ?>
                     <?php echo '<li>'
                         . Html::beginForm(['/site/logout'], 'post')
                         . Html::submitButton(
@@ -64,16 +62,15 @@ use yii\helpers\Html;
                     <h1 class="mb-0">
                         <a href="<?= Yii::$app->request->baseUrl ?>/" class="text-black mb-0">
                             <img src="<?= Yii::$app->request->baseUrl ?>/images/dark-logo.png" alt="qadnc logo" class="site-logo" />
-                            <img src="<?= Yii::$app->request->baseUrl ?>/images/ligth-logo.png" alt="qadnc logo" class="home-logo" />
                         </a>
                     </h1>
                 </div>
                 <div class="col-12 col-md-10 d-none d-xl-block text-left">
-                    <nav class="site-navigation position-relative text-right" role="navigation">
+                    <nav class="site-navigation position-relative text-left" role="navigation">
 
                         <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li class="<?= Yii::$app->controller->route =='site/consulting'?'active':''?>">
-                                <?=Html::a("<span>الرئيسية</span>",['site/index'])?>
+                            <li class="<?= Yii::$app->controller->route == 'site/index' ? 'active' : '' ?>">
+                                <?= Html::a("<span>الرئيسية</span>", ['site/index']) ?>
                             </li>
 
                             <li class="has-children">
@@ -91,23 +88,23 @@ use yii\helpers\Html;
                                 </ul>
                             </li>
 
-                            <li class="<?= Yii::$app->controller->route =='site/board'?'active':''?>">
-                               <?=Html::a("<span>مجلس الادارة</span>",['site/board'])?>
+                            <li class="<?= Yii::$app->controller->route == 'site/board' ? 'active' : '' ?>">
+                                <?= Html::a("<span>مجلس الادارة</span>", ['site/board']) ?>
                             </li>
 
 
-                            <li class="<?= Yii::$app->controller->route =='site/courses'?'courses':''?>">
-                                   <?=Html::a("<span>الدورات</span>",['site/courses'])?>
+                            <li class="<?= Yii::$app->controller->route == 'site/courses' ? 'active' : '' ?>">
+                                <?= Html::a("<span>الدورات</span>", ['site/courses']) ?>
                             </li>
-                            <li class="<?= Yii::$app->controller->route =='site/consulting'?'active':''?>">
-                                <?=Html::a("<span>الاستشارات</span>",['site/consulting'])?>
+                            <li class="<?= Yii::$app->controller->route == 'site/consulting' ? 'active' : '' ?>">
+                                <?= Html::a("<span>الاستشارات</span>", ['site/consulting']) ?>
                             </li>
 
 
                             <?php if (Yii::$app->user->isGuest) : ?>
 
-                                <li class="<?= Yii::$app->controller->route =='site/login'?'active':''?>">
-                                     <?=Html::a("<span>تسجيل دخول</span>",['site/login'])?>
+                                <li class="<?= Yii::$app->controller->route == 'site/login' ? 'active' : '' ?>">
+                                    <?= Html::a("<span>تسجيل دخول</span>", ['site/login']) ?>
                                 </li>
 
                             <?php else : ?>
@@ -115,17 +112,17 @@ use yii\helpers\Html;
                                 <li class="has-children">
                                     <a>
                                         <span>
-                                        <img src="<?= Yii::$app->request->baseUrl. '/'.Yii::$app->user->identity->avatar ?>" alt="" class="header-profile-img">
+                                            <img src="<?= Yii::$app->request->baseUrl . '/' . Yii::$app->user->identity->avatar ?>" alt="" class="header-profile-img">
                                             <?= Yii::$app->user->identity->first_name ?>
                                             <i class="fas fa-angle-down icon-down"></i>
                                         </span>
                                     </a>
                                     <ul class="dropdown arrow-top">
-                                        
-                                        <li><?=Html::a("الملف الشخصي",['site/profile'])?></li>
+
+                                        <li><?= Html::a("الملف الشخصي", ['site/profile']) ?></li>
                                         <?php if (Yii::$app->user->identity->type == \app\models\User::SUPER_ADMIN) : ?>
-                                            <li><a href="<?= \yii\helpers\Url::to(['/courses/index']) ?>"><?= Yii::t('app','Dashboard')?></a></li>
-                                        <?php endif;?>
+                                            <li><a href="<?= \yii\helpers\Url::to(['/courses/index']) ?>"><?= Yii::t('app', 'Dashboard') ?></a></li>
+                                        <?php endif; ?>
 
                                         <?php echo '<li>'
                                             . Html::beginForm(['/site/logout'], 'post')

@@ -32,7 +32,7 @@ $this->title = 'Application';
 <div id="aboutUs" class="container">
     <div class="row about-us">
         <div class="col-md-4 col-12">
-            <img src="<?= Yii::$app->request->baseUrl ?>/images/Business-1.png" style="width: 100%;" />
+            <img src="<?= Yii::$app->request->baseUrl ?>/images/about_us.jpg" style="width: 100%;" />
         </div>
         <div class="col-md-8 col-12">
             <div class="about-us-title">
@@ -71,7 +71,8 @@ $this->title = 'Application';
             <?php foreach ($associations as $association) : ?>
                 <div class="col-3">
                     <div class="activity-icon">
-                        <img src="<?= Yii::$app->request->baseUrl ?>/images/icon.svg" width="100%" />
+                        <img src="<?= $association->image; ?>" width="100%" />
+                        
                     </div>
                     <div>
                         <?= $association->name; ?>
@@ -121,7 +122,7 @@ $this->title = 'Application';
             <div class="row">
                 <div class="col-12 col-lg-4  mt-4">
                     <div class="row">
-                        <div class="col-2"><i class="fas fa-envelope contact-us-icon"></i></div>
+                        <div class="col-2"><img src="<?= Yii::$app->request->baseUrl ?>/images/email.png" /></div>
                         <div class="col-10">
                             <div class="mb-1">
                                 <strong>البريد الإلكتروني</strong>
@@ -132,7 +133,7 @@ $this->title = 'Application';
                 </div>
                 <div class="col-12 col-lg-4  mt-4">
                     <div class="row">
-                        <div class="col-2"><i class="fas fa-mobile-alt contact-us-icon"></i></div>
+                        <div class="col-2"><img src="<?= Yii::$app->request->baseUrl ?>/images/mobile.png" /></div>
                         <div class="col-10">
                             <div class="mb-1">
                                 <strong>الجوال</strong>
@@ -143,7 +144,7 @@ $this->title = 'Application';
                 </div>
                 <div class="col-12 col-lg-4  mt-4">
                     <div class="row">
-                        <div class="col-2"><i class="fas fa-phone-alt contact-us-icon"></i></div>
+                        <div class="col-2"><img src="<?= Yii::$app->request->baseUrl ?>/images/phone.png" /></div>
                         <div class="col-10">
                             <div class="mb-1">
                                 <strong>الهاتف</strong>
@@ -156,7 +157,7 @@ $this->title = 'Application';
             <div class="row">
                 <div class="col-12 col-lg-4  mt-4">
                     <div class="row">
-                        <div class="col-2"><i class="fab fa-twitter contact-us-icon twitter-icon"></i></div>
+                        <div class="col-2"><img src="<?= Yii::$app->request->baseUrl ?>/images/twitter.png" /></div>
                         <div class="col-10">
                             <div class="mb-1">
                                 <strong>تويتر</strong>
@@ -190,7 +191,7 @@ $this->title = 'Application';
             </div>
         </div>
         <div class="col text-left">
-            <img src="<?= Yii::$app->request->baseUrl ?>/images/contact-us.png" />
+            <img src="<?= Yii::$app->request->baseUrl ?>/images/contact_us.jpg" style="max-height: 350px;"/>
         </div>
     </div>
 </div>

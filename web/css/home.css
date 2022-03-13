@@ -12,7 +12,7 @@
     font-size: 20px;
     font-weight: bold;
     padding-bottom: 20px;
-    color: #00d0c5
+    color: #005a8a;
 }
 
 .about-us-desc {
@@ -79,7 +79,7 @@
     background-size: cover;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
 }
 
 .slider-image:after {
@@ -94,6 +94,12 @@
 
 .carousel-caption {
     top:20.5rem
+}
+
+@media only screen and (max-width: 1200px) {
+    .carousel-caption {
+        top:10.5rem
+    }
 }
 
 .carousel-title {
@@ -114,7 +120,7 @@
     line-height: 35px;
 }
 
-.site-navbar {
+/* .site-navbar {
     position: absolute;
     z-index: 3;
     width: 100%;
@@ -124,7 +130,7 @@
 
 .site-navbar .site-navigation .site-menu>li>a, .menu-icon .text-dark {
     color: #fff !important;
-}
+} */
 
 
 .achievements {
@@ -256,10 +262,6 @@
     z-index: 233333333333333;
 }
 
-.site-navbar .site-logo {
-    display: none;
-}
-
-.site-navbar .home-logo {
-    display: block;
+.text-right {
+    text-align: right;
 }

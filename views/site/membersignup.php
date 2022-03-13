@@ -103,7 +103,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="<?= Yii::$app->request->baseUrl ?>/images/member.png" class="consulting-image" />
+                    <img src="<?= Yii::$app->request->baseUrl ?>/images/join-us.jpg" class="consulting-image" />
                 </div>
             </div>
         </div>
