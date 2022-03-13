@@ -41,6 +41,7 @@ class Achievements extends \yii\db\ActiveRecord
             [['body'], 'string','on'=>[self::Create ,self::Update ]],
             [['title'], 'string', 'max' => 1000,'on'=>[self::Create ,self::Update ]],
             [['vedio'], 'string', 'max' => 265,'on'=>[self::Create ,self::Update ]],
+            ['vedio', 'match', 'pattern' => '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/\s]{11})%i','on'=>[self::Create ,self::Update ]],
             [['file'], 'image', 'skipOnEmpty' => true, 'extensions' => 'png,jpg,jpeg,gif','on'=>[self::Create ,self::Update ]]    
         ];
     }
