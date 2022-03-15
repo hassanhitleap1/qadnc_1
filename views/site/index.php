@@ -71,7 +71,8 @@ $this->title = 'Application';
             <?php foreach ($associations as $association) : ?>
                 <div class="col-3">
                     <div class="activity-icon">
-                        <img src="<?= $association->image; ?>" width="100%" />
+                        <?=\yii\helpers\Html::img($association->image,['width'=>'100%'])?>
+
                         
                     </div>
                     <div>

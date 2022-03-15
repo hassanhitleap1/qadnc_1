@@ -36,7 +36,7 @@ function register_coure(event,course_id, is_logddin,registed){
     if(is_logddin){
         const Http = new XMLHttpRequest();
         if(registed){
-            const url=`${SITE_URL}/student-courses/unregister?id=${course_id}`;
+            const url=`/student-courses/unregister?id=${course_id}`;
             Http.open("GET", url);
             Http.send();
             Http.onreadystatechange = (e) => {
@@ -55,7 +55,7 @@ function register_coure(event,course_id, is_logddin,registed){
                 
             }
         }else{
-            const url=`${SITE_URL}/student-courses/register?course_id=${course_id}`;
+            const url=`/student-courses/register?course_id=${course_id}`;
             Http.open("GET", url);
             Http.send();
             Http.onreadystatechange = (e) => {
@@ -78,7 +78,7 @@ function register_coure(event,course_id, is_logddin,registed){
     
     }else{
         alert('قم بتسجيل')
-        window.location.href = `${SITE_URL}/site/login`;   
+        window.location.href = `/site/login`;
 
     }
 
