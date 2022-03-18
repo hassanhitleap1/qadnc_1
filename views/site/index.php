@@ -29,7 +29,7 @@ $this->title = 'Application';
     </button>
 </div>
 
-<div id="aboutUs" class="container">
+<div id="aboutUs" class="container" target="aboutUs">
     <div class="row about-us">
         <div class="col-md-4 col-12">
             <img src="<?= Yii::$app->request->baseUrl ?>/images/about_us.jpg" style="width: 100%;" />
@@ -163,7 +163,7 @@ $this->title = 'Application';
                             <div class="mb-1">
                                 <strong>تويتر</strong>
                             </div>
-                            <a href="<?= $connect_us->twitter; ?>"><?= $connect_us->twitter; ?></a>
+                            <a href="https://twitter.com/<?= $connect_us->twitter; ?>" target="_blank"><?= $connect_us->twitter; ?></a>
                         </div>
                     </div>
                 </div>
@@ -174,7 +174,7 @@ $this->title = 'Application';
                             <div class="mb-1">
                                 <strong>سناب شات</strong>
                             </div>
-                            <a href="<?= $connect_us->snap; ?>" dir="ltr"><?= $connect_us->snap; ?></a>
+                            <a href="https://www.snapchat.com/add/<?= $connect_us->snap; ?>" target="_blank"><?= $connect_us->snap; ?></a>
                         </div>
                     </div>
                 </div>
@@ -185,7 +185,7 @@ $this->title = 'Application';
                             <div class="mb-1">
                                 <strong>انستغرام</strong>
                             </div>
-                            <a href="<?= $connect_us->instagram; ?>" dir="ltr"><?= $connect_us->instagram; ?></a>
+                            <a href="https://www.instagram.com/<?= $connect_us->instagram; ?>" target="_blank"><?= $connect_us->instagram; ?></a>
                         </div>
                     </div>
                 </div>

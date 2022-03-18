@@ -81,10 +81,10 @@ use yii\helpers\Html;
                                     </span>
                                 </a>
                                 <ul class="dropdown arrow-top">
-                                    <li><a href="/#aboutUs">من نحن</a></li>
-                                    <li><a href="/#activity">أنشطة الجمعية</a></li>
-                                    <li><a href="/#achievements">الأخبار والإعلانات</a></li>
-                                    <li><a href="/#contactUs">اتصل بنا</a></li>
+                                    <li><a href="/#aboutUs" class="scroll">من نحن</a></li>
+                                    <li><a href="/#activity" class="scroll">أنشطة الجمعية</a></li>
+                                    <li><a href="/#achievements" class="scroll">الأخبار والإعلانات</a></li>
+                                    <li><a href="/#contactUs" class="scroll">اتصل بنا</a></li>
                                 </ul>
                             </li>
 

@@ -93,9 +93,9 @@ function getSiteUrl() {
     return site_url+'/web';
 }
 
-$('.scroll').click(function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $('#' + $(this).attr('target')).offset().top - 100
-    }, 1000);
-});
+// $('.scroll').click(function(e) {
+//     e.preventDefault();
+//     $('html, body').animate({
+//         scrollTop: $('#' + $(this).attr('target')).offset().top - 90
+//     }, 1000);
+// });
